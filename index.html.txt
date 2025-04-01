@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الأسئلة المتنوعة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="question-container">
+        <p id="question">هل أنت مستعد للبدء؟</p>
+        <div id="options">
+            <button class="option" onclick="checkAnswer(0)">الاختيار 1</button>
+            <button class="option" onclick="checkAnswer(1)">الاختيار 2</button>
+            <button class="option" onclick="checkAnswer(2)">الاختيار 3</button>
+            <button class="option" onclick="checkAnswer(3)">الاختيار 4</button>
+        </div>
+        <p id="feedback"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

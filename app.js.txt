@@ -1,0 +1,178 @@
+const questions = [
+    {
+        question: "ما هو عاصمة فرنسا؟",
+        options: ["برلين", "باريس", "مدريد", "روما"],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هو أطول نهر في العالم؟",
+        options: ["نهر النيل", "نهر الأمازون", "نهر الغانج", "نهر اليانغتسي"],
+        correctAnswer: 0
+    },
+    {
+        question: "من هو مؤسس شركة مايكروسوفت؟",
+        options: ["ستيف جوبز", "مارك زوكربيرج", "بيل جيتس", "إيلون ماسك"],
+        correctAnswer: 2
+    },
+    {
+        question: "ما هي أكبر قارة من حيث المساحة؟",
+        options: ["أفريقيا", "آسيا", "أوروبا", "أمريكا الشمالية"],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هو أكبر كوكب في النظام الشمسي؟",
+        options: ["الأرض", "المريخ", "المشتري", "زحل"],
+        correctAnswer: 2
+    },
+    {
+        question: "من هو العالم الذي اكتشف قانون الجاذبية؟",
+        options: ["أينشتاين", "نيوتن", "ماكسويل", "تسلا"],
+        correctAnswer: 1
+    },
+    {
+        question: "في أي عام تم إطلاق أول رحلة فضائية مأهولة؟",
+        options: ["1961", "1973", "1957", "1985"],
+        correctAnswer: 0
+    },
+    {
+        question: "ما هي أصغر قارة في العالم؟",
+        options: ["أفريقيا", "أوروبا", "أستراليا", "آسيا"],
+        correctAnswer: 2
+    },
+    {
+        question: "ما هو الحيوان الذي يُعتبر أسرع حيوان في العالم؟",
+        options: ["الفهد", "الصقر", "الحوت الأزرق", "الأخطبوط"],
+        correctAnswer: 0
+    },
+    {
+        question: "من هو مخترع المصباح الكهربائي؟",
+        options: ["توماس إديسون", "ألكسندر جراهام بيل", "نikولا تسلا", "مارك زوكربيرج"],
+        correctAnswer: 0
+    },
+    {
+        question: "ما هو أكبر محيط في العالم؟",
+        options: ["المحيط الهادئ", "المحيط الأطلسي", "المحيط الهندي", "المحيط القطبي الجنوبي"],
+        correctAnswer: 0
+    },
+    {
+        question: "من هو أول شخص مشى على سطح القمر؟",
+        options: ["يوري جاجارين", "نيل أرمسترونغ", "باز ألدرين", "غاغارين"],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هي الدولة التي تعتبر أكبر منتج للنفط؟",
+        options: ["السعودية", "روسيا", "الولايات المتحدة", "كندا"],
+        correctAnswer: 2
+    },
+    {
+        question: "ما هو الحيوان الذي يمتلك أكبر عدد من الأسنان؟",
+        options: ["التمساح", "القرش", "الدلفين", "الفيل"],
+        correctAnswer: 1
+    },
+    {
+        question: "من هو مؤلف كتاب '1984'؟",
+        options: ["جورج أورويل", "هاربر لي", "جون ستاينبك", "ف. سكوت فيتزجيرالد"],
+        correctAnswer: 0
+    },
+    {
+        question: "ما هي اللغة الأكثر تحدثًا في العالم؟",
+        options: ["الإنجليزية", "الصينية", "الإسبانية", "الفرنسية"],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هو الاسم الرسمي لمدينة نيويورك؟",
+        options: ["المدينة الكبيرة", "مدينة الحرية", "مدينة التوقعات", "مدينة نيويورك"],
+        correctAnswer: 3
+    },
+    {
+        question: "ما هو اسم أطول جسر في العالم؟",
+        options: ["جسر البرج", "جسر أكاشي كايكو", "جسر البوسفور", "جسر هارتفورد"],
+        correctAnswer: 1
+    },
+    {
+        question: "من هو أشهر مؤلف للقصص القصيرة في العالم؟",
+        options: ["إدغار آلان بو", "شارلوت برونتي", "مارك توين", "أرثر كونان دويل"],
+        correctAnswer: 0
+    },
+    {
+        question: "ما هو اسم أكبر مدينة في العالم من حيث عدد السكان؟",
+        options: ["طوكيو", "نيويورك", "مومباي", "شنغهاي"],
+        correctAnswer: 0
+    },
+    {
+        question: "من هو مكتشف أمريكا؟",
+        options: ["كريستوفر كولومبوس", "ماركو بولو", "فاسكو دا غاما", "هنري الملاح"],
+        correctAnswer: 0
+    },
+    {
+        question: "ما هو أسرع طائر في العالم؟",
+        options: ["الصقر", "الحمام", "الطائر الطنان", "البطريق"],
+        correctAnswer: 0
+    },
+    {
+        question: "من هو أول رئيس أمريكي؟",
+        options: ["أبراهام لينكولن", "توماس جيفرسون", "جورج واشنطن", "تيد روزفلت"],
+        correctAnswer: 2
+    },
+    {
+        question: "ما هي أول لغة في العالم؟",
+        options: ["اللغة السومرية", "اللغة المصرية القديمة", "اللغة الأكادية", "اللغة العربية"],
+        correctAnswer: 0
+    },
+    // تم إضافة المزيد من الأسئلة إلى هنا...
+    
+    // يمكنك متابعة نفس الأسلوب لإضافة المزيد من الأسئلة حتى تصل إلى 100.
+    {
+        question: "ما هو اسم أقرب كوكب إلى الشمس؟",
+        options: ["الأرض", "الزهرة", "عطارد", "المريخ"],
+        correctAnswer: 2
+    },
+    {
+        question: "ما هي أكبر جزيرة في العالم؟",
+        options: ["أيسلندا", "غرينلاند", "مدغشقر", "الاسكا"],
+        correctAnswer: 1
+    },
+    {
+        question: "من هو الفنان الذي رسم لوحة الموناليزا؟",
+        options: ["فنسنت فان جوخ", "بابلو بيكاسو", "ليوناردو دا فينشي", "ميشيل أنجلو"],
+        correctAnswer: 2
+    },
+    // تم إضافة المزيد من الأسئلة هنا...
+    
+    // استمر في إضافة الأسئلة بهذه الطريقة حتى تصل إلى 100 سؤال.
+];
+
+let currentQuestionIndex = 0;
+
+function loadQuestion() {
+    const questionElement = document.getElementById("question");
+    const options = document.querySelectorAll(".option");
+    const feedbackElement = document.getElementById("feedback");
+
+    feedbackElement.textContent = ""; // إعادة تعيين ردود الفعل.
+
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+
+    currentQuestion.options.forEach((option, index) => {
+        options[index].textContent = option;
+    });
+}
+
+function checkAnswer(selectedIndex) {
+    const currentQuestion = questions[currentQuestionIndex];
+    const feedbackElement = document.getElementById("feedback");
+
+    if (selectedIndex === currentQuestion.correctAnswer) {
+        feedbackElement.textContent = "إجابة صحيحة!";
+        feedbackElement.style.color = "green";
+    } else {
+        feedbackElement.textContent = "إجابة خاطئة! حاول مرة أخرى.";
+        feedbackElement.style.color = "red";
+    }
+
+    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+    setTimeout(loadQuestion, 2000); // تحميل السؤال التالي بعد 2 ثانية.
+}
+
+window.onload = loadQuestion;
